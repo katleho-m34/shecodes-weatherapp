@@ -5,27 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/styles.css">
- </head>
+    </head>
 
  <body>
     <div class="weather-app">
         <header>
-        <form>
-            <input type="text" placeholder="Enter a city" required>
-            <input type="submit" value="Search">
+        <form class="search-form">
+            <input type="text" placeholder="Enter a city" required class="search-form-input">
+            <input type="submit" value="Search" class="search-form-button">
         </form>
     </header>
 
-    <hr> 
+    
     <main>
-        <div>
-    <h1>Johannesburg</h1>
-    <p>Friday 11:56, moderate rain<br> Humidity: 87%, Wind: 7.2km/h</p>
+        <div class="app-data">
+     <div>
+        <h1 class="current-city">Johannesburg</h1>
+        <p class="weather-details">Friday 11:56, moderate rain<br> Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong></p>
+    </div>
+
+    <div class="temperature-container">
+        <div class="weather-icon">🌤️</div>
+        <div class="current-temperature">12</div>
+        <div class="temperature-unit">°C</div>
+    </div>
+
     </div>
     </main>
-
-    <div>🌤️12°C</div>
-
+    
     <footer>
         This project was coded by <a href="https://github.com/katleho-m34">Katleho</a>
         and is on <a href="https://github.com/katleho-m34/my-beautiful-app/commits?author=katleho-m34">GitHub</a>
