@@ -5,11 +5,13 @@
    let descriptionElement = document.querySelector("#weather-description");
    let humidityElement = document.querySelector("#humidity");
    let windElement = document.querySelector("#wind");
+   let iconElement = document.querySelector("#icon");
 
    windElement.innerHTML = `${response.data.wind.speed} km/h`;
    humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
    cityElement.innerHTML = response.data.city;
    temperatureElement.innerHTML =  Math.round(temperature);
+   icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon">`;
    descriptionElement.innerHTML = response.data.condition.description;
 
  }
@@ -33,7 +35,16 @@
  let now = new Date();
 
  let dateElement = document.querySelector("#date");
- let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+ let days = [
+   "Sunday", 
+   "Monday", 
+   "Tuesday", 
+   "Wednesday", 
+   "Thursday", 
+   "Friday", 
+   "Saturday"
+   ];
+
  let day = days[now.getDay()];
 
  let hours = now.getHours();
