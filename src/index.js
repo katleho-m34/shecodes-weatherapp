@@ -33,7 +33,7 @@
  let now = new Date();
 
  let dateElement = document.querySelector("#date");
- let days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+ let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
  let day = days[now.getDay()];
 
  let hours = now.getHours();

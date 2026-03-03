@@ -75,8 +75,9 @@
  }
 
  .weather-icon {
-   font-size: 35px;
-   margin-top: 22px;
+   width: 80px;
+   height: 80px;
+   margin-top: 12px;
  }
 
  .temperature-unit {
