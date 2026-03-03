@@ -1,11 +1,17 @@
  function displayTemperature(response) {
    let temperatureElement = document.querySelector("#current-temperature");
    let temperature = response.data.temperature.current;
-   
    let cityElement = document.querySelector("#weather-app-city");
-   cityElement.innerHTML = response.data.city;
+   let descriptionElement = document.querySelector("#weather-description");
+   let humidityElement = document.querySelector("#humidity");
+   let windElement = document.querySelector("#wind");
 
+   windElement.innerHTML = `${response.data.wind.speed} km/h`;
+   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+   cityElement.innerHTML = response.data.city;
    temperatureElement.innerHTML =  Math.round(temperature);
+   descriptionElement.innerHTML = response.data.condition.description;
+
  }
 
  function searchCity(city) {
@@ -23,3 +29,14 @@
 
  let searchFormElement = document.querySelector("#search-form");
  searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+ let now = new Date();
+
+ let dateElement = document.querySelector("#date");
+ let days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+ let day = days[now.getDay()];
+
+ let hours = now.getHours();
+ let minutes = now.getMinutes();
+
+ dateElement.innerHTML = `${day} ${hours}:${minutes},`;
