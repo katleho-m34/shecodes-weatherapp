@@ -93,7 +93,7 @@
 
  .weather-forecast {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
  }
 
  .forecast-date {
@@ -104,8 +104,10 @@
  }
 
  .forecast-icon {
-  font-size: 38px;
-  text-align: center;
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 0 auto;
  }
 
  .forecast-temperatures {
