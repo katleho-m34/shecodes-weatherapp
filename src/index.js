@@ -51,3 +51,29 @@
  let minutes = now.getMinutes();
 
  dateElement.innerHTML = `${day} ${hours}:${minutes},`;
+
+ function displayForecast() {
+
+  let days = ['Thur', 'Fri', 'Sat', 'Sun', 'Mon'];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml = 
+    forecastHtml +
+    `
+    <div class="forecast-day">
+       <div class="forecast-date">${day}</div>
+       <div class="forecast-icon">🌤️</div>
+       <div class="forecast-temperatures">
+        <div class="forecast-temperature"><strong>22°</strong></div>
+        <div class="forecast-temperature">15°</div>
+        </div>
+       </div>
+       `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+ }
+ 
+  displayForecast();
